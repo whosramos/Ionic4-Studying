@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Second Blank</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-input [(ngModel)]="value" clearInput></ion-input>
+  </ion-item>
+  
+  <ion-button expand="block" [routerLink]="['/facts', value]" routerDirection="forward">
+    Go Facts with Router Link
+  </ion-button>
+
+  <ion-button expand="block" (click)="goFacts()">
+    Go Facts in a Function
+  </ion-button>
+
+  <ion-button expand="full"(click)="openModal()">
+    Go Modal
+  </ion-button>
+
+  <ion-button expand="full" (click)="openPopover($event)">
+    Go Popover
+  </ion-button>
+
+</ion-content>
